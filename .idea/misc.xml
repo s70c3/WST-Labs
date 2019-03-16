@@ -9,6 +9,10 @@
       <list>
         <option value="$PROJECT_DIR$/../j2ee/pom.xml" />
         <option value="$PROJECT_DIR$/../standalone/pom.xml" />
+        <option value="$PROJECT_DIR$/j2ee/pom.xml" />
+        <option value="$PROJECT_DIR$/standalone/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/DAO/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="j2ee:war exploded">
-    <output-path>$PROJECT_DIR$/../j2ee/target/j2ee-0.0.1-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/j2ee/target/j2ee-0.0.1-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
