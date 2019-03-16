@@ -1,5 +1,5 @@
 
-package com.ifmo.wst.generated;
+package generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

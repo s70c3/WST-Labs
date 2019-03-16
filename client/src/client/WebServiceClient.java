@@ -1,7 +1,7 @@
-package com.ifmo.wst.client;
+package client;
 
 
-import com.ifmo.wst.generated.*;
+import generated.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;

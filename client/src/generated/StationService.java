@@ -1,5 +1,5 @@
 
-package com.ifmo.wst.generated;
+package generated;
 
 import java.net.MalformedURLException;
 import java.net.URL;
