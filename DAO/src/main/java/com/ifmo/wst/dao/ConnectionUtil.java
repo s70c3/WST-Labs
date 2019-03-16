@@ -1,6 +1,4 @@
-package com.ifmo.wst.standalone;//package com.wishmaster.ifmo.ws.jaxws;
-
-import com.ifmo.wst.util.PostgresSQLDAO;
+package com.ifmo.wst.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

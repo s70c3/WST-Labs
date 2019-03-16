@@ -1,5 +1,5 @@
 
-package com.ifmo.wst;
+package com.ifmo.wst.entity;
 
 public class Station {
 
