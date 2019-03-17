@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 
 
 
-@WebService(serviceName = "StationService")
+@WebService(serviceName = "StationService", targetNamespace = "http://com.ifmo.wst.com")
 public class StationWebService {
     @Resource(lookup = "jdbc/postgres")
     private DataSource dataSource;

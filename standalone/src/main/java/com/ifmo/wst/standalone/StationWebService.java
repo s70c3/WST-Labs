@@ -8,7 +8,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
 
-@WebService(serviceName = "StationService")
+@WebService(serviceName = "StationService", targetNamespace = "http://com.ifmo.wst.com")
 public class StationWebService {
     @WebMethod(operationName = "getStations")
     public List<Station> getStations() {
