@@ -9,10 +9,10 @@
         <module name="DAO" />
         <module name="j2ee" />
         <module name="standalone" />
-        <module name="WST-1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="client" target="1.5" />
       <module name="DAO" target="1.5" />
       <module name="j2ee" target="1.8" />
       <module name="standalone" target="7" />

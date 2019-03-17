@@ -20,7 +20,10 @@ public class PostgresSQLDAO {
         this.connection = connection;
     }
 
+    public PostgresSQLDAO() {
+       this.connection = ConnectionUtil.getConnection();
 
+    }
     public static Station getStationInfo(ResultSet rs) {
         Station station;
         try {

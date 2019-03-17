@@ -1,6 +1,10 @@
 package com.ifmo.wst;
 
 
+
+import com.ifmo.wst.dao.PostgresSQLDAO;
+import com.ifmo.wst.entity.Station;
+
 import javax.annotation.Resource;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
