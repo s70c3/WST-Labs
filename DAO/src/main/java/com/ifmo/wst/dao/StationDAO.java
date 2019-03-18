@@ -64,7 +64,7 @@ public class StationDAO {
             return findAll();
         }
 
-        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, deepness);
+        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, deepness.toString());
 
         Query query = new BuildQuery()
                 .tableName(TABLE_NAME)
