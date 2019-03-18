@@ -1,7 +1,7 @@
 package com.ifmo.wst.standalone;
 
 
-import com.ifmo.wst.dao.PostgresSQLDAO;
+import com.ifmo.wst.dao.SimplePostgresSQLDAO;
 import com.ifmo.wst.entity.Station;
 
 import javax.jws.WebMethod;
@@ -12,7 +12,7 @@ import java.util.List;
 public class StationWebService {
     @WebMethod(operationName = "getStations")
     public List<Station> getStations() {
-        PostgresSQLDAO dao = new PostgresSQLDAO();
+        SimplePostgresSQLDAO dao = new SimplePostgresSQLDAO();
         List<Station> stations = dao.getAllStations();
         return stations;
     }

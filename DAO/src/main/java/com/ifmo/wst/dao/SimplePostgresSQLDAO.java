@@ -12,15 +12,15 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class PostgresSQLDAO {
+public class SimplePostgresSQLDAO {
 
     private Connection connection;
 
-    public PostgresSQLDAO(Connection connection) {
+    public SimplePostgresSQLDAO(Connection connection) {
         this.connection = connection;
     }
 
-    public PostgresSQLDAO() {
+    public SimplePostgresSQLDAO() {
        this.connection = ConnectionUtil.getConnection();
 
     }
@@ -39,7 +39,7 @@ public class PostgresSQLDAO {
             return new Station(id, name, line, deepness, isEnd, start_work_hour, start_work_minute, end_work_hour, end_work_minute);
 
         } catch (SQLException ex) {
-            Logger.getLogger(PostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     }
@@ -52,31 +52,31 @@ public class PostgresSQLDAO {
             ResultSet rs = stmt.executeQuery(query);
 
             while (rs.next()) {
-                Station station = PostgresSQLDAO.getStationInfo(rs);
+                Station station = SimplePostgresSQLDAO.getStationInfo(rs);
                 stations.add(station);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(PostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return stations;
     }
 
 
     public List<Station> getAllStations() {
-        return PostgresSQLDAO.getStationsByQuery(connection, "Select * from metro_stations");
+        return SimplePostgresSQLDAO.getStationsByQuery(connection, "Select * from metro_stations");
     }
 
     public Station getStationByName(String name) {
-        Station station = PostgresSQLDAO.getStationsByQuery(connection, "SELECT * FROM metro_stations where name=" + name).get(0);
+        Station station = SimplePostgresSQLDAO.getStationsByQuery(connection, "SELECT * FROM metro_stations where name=" + name).get(0);
         return station;
     }
 
     public List<Station> getStationsByLine(int line) {
-        return PostgresSQLDAO.getStationsByQuery(connection, "SELECT * FROM metro_stations where line=" + line);
+        return SimplePostgresSQLDAO.getStationsByQuery(connection, "SELECT * FROM metro_stations where line=" + line);
     }
 
     public List<Station> getStationsBySmth(String parameters) {
-        return PostgresSQLDAO.getStationsByQuery(connection, "SELECT * FROM metro_stations where " + parameters + "=" + parameters);
+        return SimplePostgresSQLDAO.getStationsByQuery(connection, "SELECT * FROM metro_stations where " + parameters + "=" + parameters);
 
     }
 

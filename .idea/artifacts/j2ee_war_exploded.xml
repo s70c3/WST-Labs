@@ -41,6 +41,7 @@
           <element id="archive" name="DAO-1.0-SNAPSHOT.jar">
             <element id="module-output" name="DAO" />
           </element>
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.18" />
         </element>
       </element>
       <element id="directory" name="META-INF">

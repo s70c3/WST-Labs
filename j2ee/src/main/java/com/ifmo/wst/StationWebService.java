@@ -2,7 +2,7 @@ package com.ifmo.wst;
 
 
 
-import com.ifmo.wst.dao.PostgresSQLDAO;
+import com.ifmo.wst.dao.SimplePostgresSQLDAO;
 import com.ifmo.wst.entity.Station;
 
 import javax.annotation.Resource;
@@ -25,24 +25,24 @@ public class StationWebService {
 
     @WebMethod(operationName = "getAllStations")
     public List<Station> getAllPersons() {
-        PostgresSQLDAO dao = new PostgresSQLDAO(getConnection());
+        SimplePostgresSQLDAO dao = new SimplePostgresSQLDAO(getConnection());
         return dao.getAllStations();
     }
 
     @WebMethod(operationName = "getStationByName")
     public Station getStationByName(@WebParam(name = "stationName") String name) {
-        PostgresSQLDAO dao = new PostgresSQLDAO(getConnection());
+        SimplePostgresSQLDAO dao = new SimplePostgresSQLDAO(getConnection());
         return dao.getStationByName(name);
     }
 
     @WebMethod(operationName = "getStationByLine")
     public List<Station> getStationByLine(@WebParam(name = "stationLine") int line) {
-        PostgresSQLDAO dao = new PostgresSQLDAO(getConnection());
+        SimplePostgresSQLDAO dao = new SimplePostgresSQLDAO(getConnection());
         return dao.getStationsByLine(line);
     }
     @WebMethod(operationName = "getSmthBySmth")
     public List<Station> getSmthBySmth(@WebParam(name = "stationLine") int line) {
-        PostgresSQLDAO dao = new PostgresSQLDAO(getConnection());
+        SimplePostgresSQLDAO dao = new SimplePostgresSQLDAO(getConnection());
         return dao.getStationsByLine(line);
     }
 
