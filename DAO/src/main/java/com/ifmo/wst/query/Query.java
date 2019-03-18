@@ -1,6 +1,6 @@
 package com.ifmo.wst.query;
 
-import com.ifmo.wst.dao.AllConditions;
+import com.ifmo.wst.dao.Condition;
 import com.ifmo.wst.dao.SimplePostgresSQLDAO;
 
 import java.sql.PreparedStatement;
@@ -14,10 +14,10 @@ public class Query {
 
 
     private final String queryString;
-    private final List<AllConditions> conditions;
+    private final List<Condition> conditions;
 
 
-    public Query(String queryString, List<AllConditions> conditions) {
+    public Query(String queryString, List<Condition> conditions) {
         this.queryString = queryString;
         this.conditions = conditions;
     }
@@ -27,7 +27,7 @@ public class Query {
 
         Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, "initps"+conditions.toString() );
 
-        for (AllConditions condition : conditions) {
+        for (Condition condition : conditions) {
             Class<?> valueClass = condition.getType();
             int sqlType = classToSQLType(valueClass);
             if (condition.getValue() == null) {

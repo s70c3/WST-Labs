@@ -1,6 +1,6 @@
 package com.ifmo.wst.query;
 
-import com.ifmo.wst.dao.AllConditions;
+import com.ifmo.wst.dao.Condition;
 import com.ifmo.wst.dao.SimplePostgresSQLDAO;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class BuildQuery {
     private String tableName;
     private List<String> columnNames;
-    private List<AllConditions> conditions;
+    private List<Condition> conditions;
 
     public BuildQuery() {
         columnNames = new ArrayList<>();
@@ -36,7 +36,7 @@ public class BuildQuery {
         return this;
     }
 
-    public BuildQuery condition(AllConditions condition) {
+    public BuildQuery condition(Condition condition) {
          this.conditions.add(condition);
         return this;
     }
@@ -46,9 +46,9 @@ public class BuildQuery {
         String selectColumns = String.join(", ", columnNames);
         query.append(selectColumns).append(" FROM ").append(tableName);
 
-        List<AllConditions> actualConditions = new ArrayList<>();
+        List<Condition> actualConditions = new ArrayList<>();
 
-        for (AllConditions cond : conditions) {
+        for (Condition cond : conditions) {
             if (cond.build() != null) {
                 actualConditions.add(cond);
             }
@@ -57,7 +57,7 @@ public class BuildQuery {
 
         if (!actualConditions.isEmpty()) {
             query.append(" WHERE ");
-            query.append(actualConditions.stream().map(AllConditions::build).collect(Collectors.joining(" AND ")));
+            query.append(actualConditions.stream().map(Condition::build).collect(Collectors.joining(" AND ")));
         }
         return new Query(query.toString(), actualConditions);
     }

@@ -1,12 +1,12 @@
 package com.ifmo.wst.dao;
 
-public class AllConditions {
+public class Condition {
 
     private final String columnName;
     private final Object value;
     private final Class<?> type;
 
-    public AllConditions(String columnName, Object value, Class<?> type) {
+    public Condition(String columnName, Object value, Class<?> type) {
 
         this.columnName = columnName;
         this.value = value;
@@ -32,7 +32,7 @@ public class AllConditions {
 
     @Override
     public String toString() {
-        return "AllConditions{" +
+        return "Condition{" +
                 "columnName='" + columnName + '\'' +
                 ", value=" + value +
                 ", type=" + type +

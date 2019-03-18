@@ -64,22 +64,20 @@ public class StationDAO {
             return findAll();
         }
 
-        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, deepness.toString());
 
         Query query = new BuildQuery()
                 .tableName(TABLE_NAME)
                 .selectColumns(ID_COLUMN, NAME_COLUMN, DEEPNESS_COLUMN, LINE_COLUMN, ISEND_COLUMN, START_HOUR_COLUMN, START_MINUTE_COLUMN, END_HOUR_COLUMN, END_MINUTE_COLUMN)
-                .condition(new AllConditions(ID_COLUMN, id, Integer.class))
-                .condition(new AllConditions(NAME_COLUMN, name, String.class))
-                .condition(new AllConditions(LINE_COLUMN, line, Integer.class))
-                .condition(new AllConditions(ISEND_COLUMN, isEnd, Boolean.class))
-                .condition(new AllConditions(DEEPNESS_COLUMN, deepness, Integer.class))
-                .condition(new AllConditions(START_HOUR_COLUMN, startWorkHour, Integer.class))
-                .condition(new AllConditions(START_MINUTE_COLUMN, startWorkMinute, Integer.class))
-                .condition(new AllConditions(END_HOUR_COLUMN, startWorkHour, Integer.class))
-                .condition(new AllConditions(END_MINUTE_COLUMN, startWorkMinute, Integer.class))
+                .condition(new Condition(ID_COLUMN, id, Integer.class))
+                .condition(new Condition(NAME_COLUMN, name, String.class))
+                .condition(new Condition(LINE_COLUMN, line, Integer.class))
+                .condition(new Condition(ISEND_COLUMN, isEnd, Boolean.class))
+                .condition(new Condition(DEEPNESS_COLUMN, deepness, Integer.class))
+                .condition(new Condition(START_HOUR_COLUMN, startWorkHour, Integer.class))
+                .condition(new Condition(START_MINUTE_COLUMN, startWorkMinute, Integer.class))
+                .condition(new Condition(END_HOUR_COLUMN, startWorkHour, Integer.class))
+                .condition(new Condition(END_MINUTE_COLUMN, startWorkMinute, Integer.class))
                 .buildPreparedStatementQuery();
-        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, "build query"+query.getQueryString());
 
         try {
             PreparedStatement ps = connection.prepareStatement(query.getQueryString());

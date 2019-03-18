@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="deepness" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="end" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="endWorkHour" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="endWorkMinute" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="line" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="deepness" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="end" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="endWorkHour" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="endWorkMinute" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="line" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="startWorkHour" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="startWorkMinute" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="startWorkHour" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="startWorkMinute" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,109 +47,157 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Station {
 
-    protected int deepness;
-    protected boolean end;
-    protected int endWorkHour;
-    protected int endWorkMinute;
-    protected int id;
-    protected int line;
+    protected Integer deepness;
+    protected Boolean end;
+    protected Integer endWorkHour;
+    protected Integer endWorkMinute;
+    protected Integer id;
+    protected Integer line;
     protected String name;
-    protected int startWorkHour;
-    protected int startWorkMinute;
+    protected Integer startWorkHour;
+    protected Integer startWorkMinute;
 
     /**
      * Gets the value of the deepness property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getDeepness() {
+    public Integer getDeepness() {
         return deepness;
     }
 
     /**
      * Sets the value of the deepness property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setDeepness(int value) {
+    public void setDeepness(Integer value) {
         this.deepness = value;
     }
 
     /**
      * Gets the value of the end property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public boolean isEnd() {
+    public Boolean isEnd() {
         return end;
     }
 
     /**
      * Sets the value of the end property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnd(boolean value) {
+    public void setEnd(Boolean value) {
         this.end = value;
     }
 
     /**
      * Gets the value of the endWorkHour property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getEndWorkHour() {
+    public Integer getEndWorkHour() {
         return endWorkHour;
     }
 
     /**
      * Sets the value of the endWorkHour property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setEndWorkHour(int value) {
+    public void setEndWorkHour(Integer value) {
         this.endWorkHour = value;
     }
 
     /**
      * Gets the value of the endWorkMinute property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getEndWorkMinute() {
+    public Integer getEndWorkMinute() {
         return endWorkMinute;
     }
 
     /**
      * Sets the value of the endWorkMinute property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setEndWorkMinute(int value) {
+    public void setEndWorkMinute(Integer value) {
         this.endWorkMinute = value;
     }
 
     /**
      * Gets the value of the id property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * Sets the value of the id property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setId(int value) {
+    public void setId(Integer value) {
         this.id = value;
     }
 
     /**
      * Gets the value of the line property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getLine() {
+    public Integer getLine() {
         return line;
     }
 
     /**
      * Sets the value of the line property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setLine(int value) {
+    public void setLine(Integer value) {
         this.line = value;
     }
 
@@ -180,32 +228,48 @@ public class Station {
     /**
      * Gets the value of the startWorkHour property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getStartWorkHour() {
+    public Integer getStartWorkHour() {
         return startWorkHour;
     }
 
     /**
      * Sets the value of the startWorkHour property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setStartWorkHour(int value) {
+    public void setStartWorkHour(Integer value) {
         this.startWorkHour = value;
     }
 
     /**
      * Gets the value of the startWorkMinute property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getStartWorkMinute() {
+    public Integer getStartWorkMinute() {
         return startWorkMinute;
     }
 
     /**
      * Sets the value of the startWorkMinute property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setStartWorkMinute(int value) {
+    public void setStartWorkMinute(Integer value) {
         this.startWorkMinute = value;
     }
 

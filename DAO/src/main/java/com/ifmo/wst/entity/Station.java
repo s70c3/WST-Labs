@@ -3,15 +3,15 @@ package com.ifmo.wst.entity;
 
 public class Station {
 
-    protected int deepness;
-    protected boolean end;
-    protected int endWorkHour;
-    protected int endWorkMinute;
-    protected int id;
-    protected int line;
-    protected String name;
-    protected int startWorkHour;
-    protected int startWorkMinute;
+    private Integer deepness;
+    private Boolean end;
+    private Integer endWorkHour;
+    private Integer endWorkMinute;
+    private Integer id;
+    private Integer line;
+    private String name;
+    private Integer startWorkHour;
+    private Integer startWorkMinute;
 
     public Station() {
     }
@@ -28,156 +28,76 @@ public class Station {
         this.startWorkMinute = startWorkMinute;
     }
 
-    /**
-     * Gets the value of the deepness property.
-     *
-     */
-    public int getDeepness() {
+    public Integer getDeepness() {
         return deepness;
     }
 
-    /**
-     * Sets the value of the deepness property.
-     *
-     */
-    public void setDeepness(int value) {
-        this.deepness = value;
+    public void setDeepness(Integer deepness) {
+        this.deepness = deepness;
     }
 
-    /**
-     * Gets the value of the end property.
-     *
-     */
-    public boolean isEnd() {
+    public Boolean getEnd() {
         return end;
     }
 
-    /**
-     * Sets the value of the end property.
-     *
-     */
-    public void setEnd(boolean value) {
-        this.end = value;
+    public void setEnd(Boolean end) {
+        this.end = end;
     }
 
-    /**
-     * Gets the value of the endWorkHour property.
-     *
-     */
-    public int getEndWorkHour() {
+    public Integer getEndWorkHour() {
         return endWorkHour;
     }
 
-    /**
-     * Sets the value of the endWorkHour property.
-     *
-     */
-    public void setEndWorkHour(int value) {
-        this.endWorkHour = value;
+    public void setEndWorkHour(Integer endWorkHour) {
+        this.endWorkHour = endWorkHour;
     }
 
-    /**
-     * Gets the value of the endWorkMinute property.
-     *
-     */
-    public int getEndWorkMinute() {
+    public Integer getEndWorkMinute() {
         return endWorkMinute;
     }
 
-    /**
-     * Sets the value of the endWorkMinute property.
-     *
-     */
-    public void setEndWorkMinute(int value) {
-        this.endWorkMinute = value;
+    public void setEndWorkMinute(Integer endWorkMinute) {
+        this.endWorkMinute = endWorkMinute;
     }
 
-    /**
-     * Gets the value of the id property.
-     *
-     */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    /**
-     * Sets the value of the id property.
-     *
-     */
-    public void setId(int value) {
-        this.id = value;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    /**
-     * Gets the value of the line property.
-     *
-     */
-    public int getLine() {
+    public Integer getLine() {
         return line;
     }
 
-    /**
-     * Sets the value of the line property.
-     *
-     */
-    public void setLine(int value) {
-        this.line = value;
+    public void setLine(Integer line) {
+        this.line = line;
     }
 
-    /**
-     * Gets the value of the name property.
-     *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * Sets the value of the name property.
-     *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
-     */
-    public void setName(String value) {
-        this.name = value;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    /**
-     * Gets the value of the startWorkHour property.
-     *
-     */
-    public int getStartWorkHour() {
+    public Integer getStartWorkHour() {
         return startWorkHour;
     }
 
-    /**
-     * Sets the value of the startWorkHour property.
-     *
-     */
-    public void setStartWorkHour(int value) {
-        this.startWorkHour = value;
+    public void setStartWorkHour(Integer startWorkHour) {
+        this.startWorkHour = startWorkHour;
     }
 
-    /**
-     * Gets the value of the startWorkMinute property.
-     *
-     */
-    public int getStartWorkMinute() {
+    public Integer getStartWorkMinute() {
         return startWorkMinute;
     }
 
-    /**
-     * Sets the value of the startWorkMinute property.
-     *
-     */
-    public void setStartWorkMinute(int value) {
-        this.startWorkMinute = value;
+    public void setStartWorkMinute(Integer startWorkMinute) {
+        this.startWorkMinute = startWorkMinute;
     }
 
     @Override
