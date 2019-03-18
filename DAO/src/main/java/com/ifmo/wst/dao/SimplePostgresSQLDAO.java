@@ -26,6 +26,7 @@ public class SimplePostgresSQLDAO {
     }
     public static Station getStationInfo(ResultSet rs) {
         Station station;
+
         try {
             int id = rs.getInt("id");
             String name = rs.getString("name");

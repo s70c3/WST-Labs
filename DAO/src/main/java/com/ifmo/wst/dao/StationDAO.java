@@ -1,16 +1,20 @@
 package com.ifmo.wst.dao;
 
 import com.ifmo.wst.entity.Station;
-import com.ifmo.wst.query.Query;
 import com.ifmo.wst.query.BuildQuery;
+import com.ifmo.wst.query.Query;
 
-
-import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Stream;
+
+//import com.ifmo.wst.query.Query;
+//import com.ifmo.wst.query.BuildQuery;
+//
 
 public class StationDAO {
 
@@ -18,6 +22,7 @@ public class StationDAO {
     private final String ID_COLUMN = "id";
     private final String NAME_COLUMN = "name";
     private final String DEEPNESS_COLUMN = "deepness";
+    private final String ISEND_COLUMN = "isend";
     private final String LINE_COLUMN = "line";
     private final String START_HOUR_COLUMN = "start_work_hour";
     private final String START_MINUTE_COLUMN = "start_work_minute";
@@ -25,35 +30,47 @@ public class StationDAO {
     private final String END_HOUR_COLUMN = "end_work_hour";
     private final String END_MINUTE_COLUMN = "end_work_minute";
 
-    private final DataSource dataSource;
+    private final Connection connection;
 
-    public StationDAO(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public StationDAO(Connection connection) {
+        this.connection = connection;
+    }
+
+    public StationDAO() {
+        this.connection = ConnectionUtil.getConnection();
+
     }
 
     public List<Station> findAll() throws SQLException {
 //        log.debug("Find all query");
-        try (Connection connection = dataSource.getConnection()) {
+        try {
             Statement statement = connection.createStatement();
-            statement.execute("SELECT id, initiator, reason, method, planet, date FROM exterminatus");
+            statement.execute("SELECT *  FROM metro_stations");
             List<Station> result = rsToEntities(statement.getResultSet());
+            System.out.println(result);
             return result;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
         }
 
     }
 
-    public List<Station> filter(int id, String name, int line, int deepness, boolean isEnd, int startWorkHour, int startWorkMinute, int endWorkHour, int endWorkMinute) throws SQLException {
-        //log.debug("Filter with args: {} {} {} {} {} {}",id, name, line, deepness, isEnd, startWorkHour, startWorkMinute, endWorkHour, endWorkMinute);
+    public List<Station> filter(Integer id, String name, Integer line, Integer deepness, Boolean isEnd, Integer startWorkHour, Integer startWorkMinute, Integer endWorkHour, Integer endWorkMinute) throws SQLException {
+        System.out.println("Hello");
+
         if (Stream.of(id, name, line, deepness, isEnd, startWorkHour, startWorkMinute, endWorkHour, endWorkMinute).allMatch(Objects::isNull)) {
-          //  log.debug("Args are empty");
             return findAll();
         }
+        System.out.println(line);
         Query query = new BuildQuery()
                 .tableName(TABLE_NAME)
-                .selectColumns(ID_COLUMN, NAME_COLUMN, DEEPNESS_COLUMN, LINE_COLUMN, START_HOUR_COLUMN, START_MINUTE_COLUMN, END_HOUR_COLUMN, END_MINUTE_COLUMN)
+                .selectColumns(ID_COLUMN, NAME_COLUMN, DEEPNESS_COLUMN, LINE_COLUMN, ISEND_COLUMN, START_HOUR_COLUMN, START_MINUTE_COLUMN, END_HOUR_COLUMN, END_MINUTE_COLUMN)
                 .condition(new AllConditions(ID_COLUMN, id, Integer.class))
                 .condition(new AllConditions(NAME_COLUMN, name, String.class))
                 .condition(new AllConditions(LINE_COLUMN, line, Integer.class))
+                .condition(new AllConditions(ISEND_COLUMN, isEnd, Boolean.class))
                 .condition(new AllConditions(DEEPNESS_COLUMN, deepness, Integer.class))
                 .condition(new AllConditions(START_HOUR_COLUMN, startWorkHour, Integer.class))
                 .condition(new AllConditions(START_MINUTE_COLUMN, startWorkMinute, Integer.class))
@@ -61,11 +78,15 @@ public class StationDAO {
                 .condition(new AllConditions(END_MINUTE_COLUMN, startWorkMinute, Integer.class))
                 .buildPreparedStatementQuery();
 
-        try (Connection connection = dataSource.getConnection()) {
+        System.out.println("hhh"+query);
+        try {
             PreparedStatement ps = connection.prepareStatement(query.getQueryString());
             query.initPreparedStatement(ps);
             ResultSet rs = ps.executeQuery();
             return rsToEntities(rs);
+        } catch (SQLException ex) {
+            Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
         }
 
     }
@@ -75,7 +96,6 @@ public class StationDAO {
         while (rs.next()) {
             result.add(resultSetToEntity(rs));
         }
-//        log.debug("Result set was converted to entity list {}", result);
         return result;
     }
 

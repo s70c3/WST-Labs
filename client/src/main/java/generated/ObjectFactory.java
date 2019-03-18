@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the generated package.
+ * generated in the com.wst.ifmo.com package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -24,14 +24,26 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetStationsResponse_QNAME = new QName("http://app.com.ifmo.wst.ifmo.com/", "getStationsResponse");
-    private final static QName _GetStations_QNAME = new QName("http://app.com.ifmo.wst.ifmo.com/", "getStations");
+    private final static QName _FilterResponse_QNAME = new QName("http://com.ifmo.wst.com", "filterResponse");
+    private final static QName _FindAllResponse_QNAME = new QName("http://com.ifmo.wst.com", "findAllResponse");
+    private final static QName _GetStations_QNAME = new QName("http://com.ifmo.wst.com", "getStations");
+    private final static QName _FindAll_QNAME = new QName("http://com.ifmo.wst.com", "findAll");
+    private final static QName _Filter_QNAME = new QName("http://com.ifmo.wst.com", "filter");
+    private final static QName _GetStationsResponse_QNAME = new QName("http://com.ifmo.wst.com", "getStationsResponse");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: generated
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.wst.ifmo.com
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link Filter }
+     * 
+     */
+    public Filter createFilter() {
+        return new Filter();
     }
 
     /**
@@ -43,11 +55,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FilterResponse }
+     * 
+     */
+    public FilterResponse createFilterResponse() {
+        return new FilterResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindAllResponse }
+     * 
+     */
+    public FindAllResponse createFindAllResponse() {
+        return new FindAllResponse();
+    }
+
+    /**
      * Create an instance of {@link GetStations }
      * 
      */
     public GetStations createGetStations() {
         return new GetStations();
+    }
+
+    /**
+     * Create an instance of {@link FindAll }
+     * 
+     */
+    public FindAll createFindAll() {
+        return new FindAll();
     }
 
     /**
@@ -59,21 +95,57 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetStationsResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FilterResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://app.com.ifmo.wst.ifmo.com/", name = "getStationsResponse")
-    public JAXBElement<GetStationsResponse> createGetStationsResponse(GetStationsResponse value) {
-        return new JAXBElement<GetStationsResponse>(_GetStationsResponse_QNAME, GetStationsResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://com.ifmo.wst.com", name = "filterResponse")
+    public JAXBElement<FilterResponse> createFilterResponse(FilterResponse value) {
+        return new JAXBElement<FilterResponse>(_FilterResponse_QNAME, FilterResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://com.ifmo.wst.com", name = "findAllResponse")
+    public JAXBElement<FindAllResponse> createFindAllResponse(FindAllResponse value) {
+        return new JAXBElement<FindAllResponse>(_FindAllResponse_QNAME, FindAllResponse.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetStations }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://app.com.ifmo.wst.ifmo.com/", name = "getStations")
+    @XmlElementDecl(namespace = "http://com.ifmo.wst.com", name = "getStations")
     public JAXBElement<GetStations> createGetStations(GetStations value) {
         return new JAXBElement<GetStations>(_GetStations_QNAME, GetStations.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAll }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://com.ifmo.wst.com", name = "findAll")
+    public JAXBElement<FindAll> createFindAll(FindAll value) {
+        return new JAXBElement<FindAll>(_FindAll_QNAME, FindAll.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Filter }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://com.ifmo.wst.com", name = "filter")
+    public JAXBElement<Filter> createFilter(Filter value) {
+        return new JAXBElement<Filter>(_Filter_QNAME, Filter.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetStationsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://com.ifmo.wst.com", name = "getStationsResponse")
+    public JAXBElement<GetStationsResponse> createGetStationsResponse(GetStationsResponse value) {
+        return new JAXBElement<GetStationsResponse>(_GetStationsResponse_QNAME, GetStationsResponse.class, null, value);
     }
 
 }
