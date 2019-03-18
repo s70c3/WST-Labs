@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 
 public class StationDAO {
 
-    private final String TABLE_NAME = "metro_station";
+    private final String TABLE_NAME = "metro_stations";
     private final String ID_COLUMN = "id";
     private final String NAME_COLUMN = "name";
     private final String DEEPNESS_COLUMN = "deepness";
@@ -58,12 +58,14 @@ public class StationDAO {
     }
 
     public List<Station> filter(Integer id, String name, Integer line, Integer deepness, Boolean isEnd, Integer startWorkHour, Integer startWorkMinute, Integer endWorkHour, Integer endWorkMinute) throws SQLException {
-        System.out.println("Hello");
+
 
         if (Stream.of(id, name, line, deepness, isEnd, startWorkHour, startWorkMinute, endWorkHour, endWorkMinute).allMatch(Objects::isNull)) {
             return findAll();
         }
-        System.out.println(line);
+
+        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, deepness);
+
         Query query = new BuildQuery()
                 .tableName(TABLE_NAME)
                 .selectColumns(ID_COLUMN, NAME_COLUMN, DEEPNESS_COLUMN, LINE_COLUMN, ISEND_COLUMN, START_HOUR_COLUMN, START_MINUTE_COLUMN, END_HOUR_COLUMN, END_MINUTE_COLUMN)
@@ -77,8 +79,8 @@ public class StationDAO {
                 .condition(new AllConditions(END_HOUR_COLUMN, startWorkHour, Integer.class))
                 .condition(new AllConditions(END_MINUTE_COLUMN, startWorkMinute, Integer.class))
                 .buildPreparedStatementQuery();
+        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, "build query"+query.getQueryString());
 
-        System.out.println("hhh"+query);
         try {
             PreparedStatement ps = connection.prepareStatement(query.getQueryString());
             query.initPreparedStatement(ps);
@@ -91,6 +93,8 @@ public class StationDAO {
 
     }
 
+
+
     private List<Station> rsToEntities(ResultSet rs) throws SQLException {
         List<Station> result = new ArrayList<>();
         while (rs.next()) {
@@ -100,10 +104,10 @@ public class StationDAO {
     }
 
     private Station resultSetToEntity(ResultSet rs) throws SQLException {
-        int id = rs.getInt("id");
+        Integer id = rs.getInt("id");
         String name = rs.getString("name");
-        int line = rs.getInt("line");
-        int deepness = rs.getInt("deepness");
+        Integer line = rs.getInt("line");
+        Integer deepness = rs.getInt("deepness");
         boolean isEnd = rs.getBoolean("isEnd");
         int start_work_hour = rs.getInt("start_work_hour");
         int end_work_hour = rs.getInt("end_work_hour");

@@ -16,7 +16,7 @@ public class Station {
     public Station() {
     }
 
-    public Station(int id, String name, int line, int deepness, boolean isEnd, int startWorkHour, int startWorkMinute, int endWorkHour, int endWorkMinute) {
+    public Station(Integer id, String name, Integer line, Integer deepness, Boolean isEnd, Integer startWorkHour, Integer startWorkMinute, Integer endWorkHour, Integer endWorkMinute) {
         this.deepness = deepness;
         this.end = isEnd;
         this.endWorkHour = endWorkHour;

@@ -14,15 +14,18 @@ public class WebServiceClient {
 
 //        List<Station> stations = stationService.getStationWebServicePort().findAll();
 //
-//        System.out.println("Total stations: " + stations.size());
 //        for (Station station : stations) {
 //            System.out.println("name: " + station.getName() +
 //                    ", deepness: " + station.getDeepness() + ", line: " + station.getLine());
 //        }
 //        System.out.println("Total stations: " + stations.size());
 
-        List<Station> stations = stationService.getStationWebServicePort().filter(null, null, null, null, null, null, null, null,
-        null);
+//        Integer lineInt = new Integer(null);
+//        System.out.println(lineInt);
+        List<Station> stations = stationService.getStationWebServicePort().filter(
+                null, null, 9,
+                null, null, null,
+                null, null, null);
 
         for (Station station : stations) {
             System.out.println("name: " + station.getName() +

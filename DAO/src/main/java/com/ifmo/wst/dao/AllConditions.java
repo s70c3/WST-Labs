@@ -7,6 +7,7 @@ public class AllConditions {
     private final Class<?> type;
 
     public AllConditions(String columnName, Object value, Class<?> type) {
+
         this.columnName = columnName;
         this.value = value;
         this.type = type;
