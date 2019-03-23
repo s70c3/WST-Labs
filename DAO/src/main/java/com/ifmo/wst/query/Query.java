@@ -1,14 +1,11 @@
 package com.ifmo.wst.query;
 
 import com.ifmo.wst.dao.Condition;
-import com.ifmo.wst.dao.SimplePostgresSQLDAO;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Query {
 
@@ -24,8 +21,6 @@ public class Query {
 
     public void initPreparedStatement(PreparedStatement ps) throws SQLException {
         int i = 1;
-
-        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, "initps"+conditions.toString() );
 
         for (Condition condition : conditions) {
             Class<?> valueClass = condition.getType();

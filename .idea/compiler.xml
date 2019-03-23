@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="client" />
         <module name="DAO" />
         <module name="j2ee" />
         <module name="standalone" />
@@ -15,7 +16,7 @@
       <module name="client" target="1.5" />
       <module name="DAO" target="1.8" />
       <module name="j2ee" target="1.8" />
-      <module name="standalone" target="7" />
+      <module name="standalone" target="1.8" />
       <module name="WST-1" target="1.5" />
     </bytecodeTargetLevel>
   </component>

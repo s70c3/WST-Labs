@@ -21,14 +21,10 @@ public class StationDAO {
     private final String TABLE_NAME = "metro_stations";
     private final String ID_COLUMN = "id";
     private final String NAME_COLUMN = "name";
-    private final String DEEPNESS_COLUMN = "deepness";
-    private final String ISEND_COLUMN = "isend";
+    private final String END_COLUMN = "isend";
+    private final String TYPE_COLUMN = "station_type";
     private final String LINE_COLUMN = "line";
-    private final String START_HOUR_COLUMN = "start_work_hour";
-    private final String START_MINUTE_COLUMN = "start_work_minute";
-
-    private final String END_HOUR_COLUMN = "end_work_hour";
-    private final String END_MINUTE_COLUMN = "end_work_minute";
+    private final String CITY_COLUMN = "city";
 
     private final Connection connection;
 
@@ -57,27 +53,22 @@ public class StationDAO {
 
     }
 
-    public List<Station> filter(Integer id, String name, Integer line, Integer deepness, Boolean isEnd, Integer startWorkHour, Integer startWorkMinute, Integer endWorkHour, Integer endWorkMinute) throws SQLException {
+    public List<Station> filter(String name, Boolean isend,  String city, String line, String type) throws SQLException {
 
 
-        if (Stream.of(id, name, line, deepness, isEnd, startWorkHour, startWorkMinute, endWorkHour, endWorkMinute).allMatch(Objects::isNull)) {
+        if (Stream.of(name, line, isend, city, type).allMatch(Objects::isNull)) {
             return findAll();
         }
-
-
         Query query = new BuildQuery()
                 .tableName(TABLE_NAME)
-                .selectColumns(ID_COLUMN, NAME_COLUMN, DEEPNESS_COLUMN, LINE_COLUMN, ISEND_COLUMN, START_HOUR_COLUMN, START_MINUTE_COLUMN, END_HOUR_COLUMN, END_MINUTE_COLUMN)
-                .condition(new Condition(ID_COLUMN, id, Integer.class))
+                .selectColumns(NAME_COLUMN, LINE_COLUMN, END_COLUMN, TYPE_COLUMN, CITY_COLUMN)
                 .condition(new Condition(NAME_COLUMN, name, String.class))
-                .condition(new Condition(LINE_COLUMN, line, Integer.class))
-                .condition(new Condition(ISEND_COLUMN, isEnd, Boolean.class))
-                .condition(new Condition(DEEPNESS_COLUMN, deepness, Integer.class))
-                .condition(new Condition(START_HOUR_COLUMN, startWorkHour, Integer.class))
-                .condition(new Condition(START_MINUTE_COLUMN, startWorkMinute, Integer.class))
-                .condition(new Condition(END_HOUR_COLUMN, startWorkHour, Integer.class))
-                .condition(new Condition(END_MINUTE_COLUMN, startWorkMinute, Integer.class))
+                .condition(new Condition(LINE_COLUMN, line, String.class))
+                .condition(new Condition(END_COLUMN, isend, Boolean.class))
+                .condition(new Condition(TYPE_COLUMN, type, String.class))
+                .condition(new Condition(CITY_COLUMN, city, String.class))
                 .buildPreparedStatementQuery();
+
 
         try {
             PreparedStatement ps = connection.prepareStatement(query.getQueryString());
@@ -102,16 +93,13 @@ public class StationDAO {
     }
 
     private Station resultSetToEntity(ResultSet rs) throws SQLException {
-        Integer id = rs.getInt("id");
         String name = rs.getString("name");
-        Integer line = rs.getInt("line");
-        Integer deepness = rs.getInt("deepness");
-        boolean isEnd = rs.getBoolean("isEnd");
-        int start_work_hour = rs.getInt("start_work_hour");
-        int end_work_hour = rs.getInt("end_work_hour");
-        int start_work_minute = rs.getInt("start_work_minute");
-        int end_work_minute = rs.getInt("end_work_minute");
-        return new Station(id, name, line, deepness, isEnd, start_work_hour, start_work_minute, end_work_hour, end_work_minute);
+        String line = rs.getString("line");
+        String type = rs.getString("station_type");
+        String city = rs.getString("city");
+        Boolean isEnd = rs.getBoolean("isend");
+
+        return new Station(name, line, isEnd, type, city);
 
     }
 }

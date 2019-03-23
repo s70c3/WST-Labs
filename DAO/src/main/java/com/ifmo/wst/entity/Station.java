@@ -3,77 +3,21 @@ package com.ifmo.wst.entity;
 
 public class Station {
 
-    private Integer deepness;
-    private Boolean end;
-    private Integer endWorkHour;
-    private Integer endWorkMinute;
-    private Integer id;
-    private Integer line;
     private String name;
-    private Integer startWorkHour;
-    private Integer startWorkMinute;
+    private Boolean isEnd;
+    private String city;
+    private String line;
+    private String station_type;
 
     public Station() {
     }
 
-    public Station(Integer id, String name, Integer line, Integer deepness, Boolean isEnd, Integer startWorkHour, Integer startWorkMinute, Integer endWorkHour, Integer endWorkMinute) {
-        this.deepness = deepness;
-        this.end = isEnd;
-        this.endWorkHour = endWorkHour;
-        this.endWorkMinute = endWorkMinute;
-        this.id = id;
-        this.line = line;
+    public Station(String name, String line, Boolean isEnd, String station_type, String city) {
         this.name = name;
-        this.startWorkHour = startWorkHour;
-        this.startWorkMinute = startWorkMinute;
-    }
-
-    public Integer getDeepness() {
-        return deepness;
-    }
-
-    public void setDeepness(Integer deepness) {
-        this.deepness = deepness;
-    }
-
-    public Boolean getEnd() {
-        return end;
-    }
-
-    public void setEnd(Boolean end) {
-        this.end = end;
-    }
-
-    public Integer getEndWorkHour() {
-        return endWorkHour;
-    }
-
-    public void setEndWorkHour(Integer endWorkHour) {
-        this.endWorkHour = endWorkHour;
-    }
-
-    public Integer getEndWorkMinute() {
-        return endWorkMinute;
-    }
-
-    public void setEndWorkMinute(Integer endWorkMinute) {
-        this.endWorkMinute = endWorkMinute;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getLine() {
-        return line;
-    }
-
-    public void setLine(Integer line) {
+        this.isEnd = isEnd;
+        this.city = city;
         this.line = line;
+        this.station_type = station_type;
     }
 
     public String getName() {
@@ -84,34 +28,46 @@ public class Station {
         this.name = name;
     }
 
-    public Integer getStartWorkHour() {
-        return startWorkHour;
+    public Boolean getEnd() {
+        return isEnd;
     }
 
-    public void setStartWorkHour(Integer startWorkHour) {
-        this.startWorkHour = startWorkHour;
+    public void setEnd(Boolean end) {
+        isEnd = end;
     }
 
-    public Integer getStartWorkMinute() {
-        return startWorkMinute;
+    public String getCity() {
+        return city;
     }
 
-    public void setStartWorkMinute(Integer startWorkMinute) {
-        this.startWorkMinute = startWorkMinute;
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getLine() {
+        return line;
+    }
+
+    public void setLine(String line) {
+        this.line = line;
+    }
+
+    public String getStation_type() {
+        return station_type;
+    }
+
+    public void setStation_type(String station_type) {
+        this.station_type = station_type;
     }
 
     @Override
     public String toString() {
         return "Station{" +
-                "deepness=" + deepness +
-                ", end=" + end +
-                ", endWorkHour=" + endWorkHour +
-                ", endWorkMinute=" + endWorkMinute +
-                ", id=" + id +
-                ", line=" + line +
-                ", name='" + name + '\'' +
-                ", startWorkHour=" + startWorkHour +
-                ", startWorkMinute=" + startWorkMinute +
+                "name='" + name + '\'' +
+                ", isEnd=" + isEnd +
+                ", city='" + city + '\'' +
+                ", line='" + line + '\'' +
+                ", station_type='" + station_type + '\'' +
                 '}';
     }
 }

@@ -28,17 +28,13 @@ public class SimplePostgresSQLDAO {
         Station station;
 
         try {
-            int id = rs.getInt("id");
             String name = rs.getString("name");
-            int line = rs.getInt("line");
-            int deepness = rs.getInt("deepness");
-            boolean isEnd = rs.getBoolean("isEnd");
-            int start_work_hour = rs.getInt("start_work_hour");
-            int end_work_hour = rs.getInt("end_work_hour");
-            int start_work_minute = rs.getInt("start_work_minute");
-            int end_work_minute = rs.getInt("end_work_minute");
-            return new Station(id, name, line, deepness, isEnd, start_work_hour, start_work_minute, end_work_hour, end_work_minute);
+            String line = rs.getString("line");
+            String type = rs.getString("type");
+            String city = rs.getString("city");
+            Boolean isEnd = rs.getBoolean("isEnd");
 
+            return new Station(name, line, isEnd, type, city);
         } catch (SQLException ex) {
             Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
             return null;

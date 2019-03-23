@@ -1,12 +1,9 @@
 package com.ifmo.wst.query;
 
 import com.ifmo.wst.dao.Condition;
-import com.ifmo.wst.dao.SimplePostgresSQLDAO;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class BuildQuery {
@@ -53,7 +50,6 @@ public class BuildQuery {
                 actualConditions.add(cond);
             }
         }
-        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, actualConditions.toString());
 
         if (!actualConditions.isEmpty()) {
             query.append(" WHERE ");

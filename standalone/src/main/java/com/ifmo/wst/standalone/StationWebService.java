@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.xml.bind.annotation.XmlElement;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -38,15 +39,16 @@ public class StationWebService {
     }
 
     @WebMethod(operationName = "filter")
-    public List<Station> filter(@WebParam(name = "id") Integer id, @WebParam(name = "name") String name,
-                                @WebParam(name = "deepness") Integer deepness, @WebParam(name = "line") Integer line,
-                                @WebParam(name = "isend") Boolean isEnd,
-                                @WebParam(name = "startworkhour") Integer startworkhour,
-                                @WebParam(name = "startworkhourminute") Integer startworkhourminute,
-                                @WebParam(name = "endworkhour") Integer endworkhour,
-                                @WebParam(name = "endworkhourminute") Integer endworkhourminute) {
+    public List<Station> filter(@WebParam(name = "name")@XmlElement(nillable=true) String name,
+                                @WebParam(name = "city")@XmlElement(nillable=true) String city,
+                                @WebParam(name = "line")@XmlElement(nillable=true) String line,
+                                @WebParam(name = "isend")@XmlElement(nillable=true) Boolean isEnd,
+                                @WebParam(name = "type")@XmlElement(nillable=true) String type
+                               ) {
+
         try {
-            return stationDAO.filter(id, name, deepness, line, isEnd, startworkhour, startworkhourminute, endworkhour, endworkhourminute);
+
+            return stationDAO.filter(name, isEnd, line, city, type);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -65,4 +67,3 @@ public class StationWebService {
 
 
 }
-

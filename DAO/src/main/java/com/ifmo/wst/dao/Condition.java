@@ -8,6 +8,7 @@ public class Condition {
 
     public Condition(String columnName, Object value, Class<?> type) {
 
+
         this.columnName = columnName;
         this.value = value;
         this.type = type;
