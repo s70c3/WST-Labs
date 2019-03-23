@@ -55,6 +55,7 @@ public class StationDAO {
 
     public List<Station> filter(String name, Boolean isend,  String city, String line, String type) throws SQLException {
 
+        Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, name+city+line+type);
 
         if (Stream.of(name, line, isend, city, type).allMatch(Objects::isNull)) {
             return findAll();
