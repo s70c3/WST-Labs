@@ -1,13 +1,13 @@
 # WST-1
 First lab of Web Service Techologies. Implemented standalone and j2ee servers and simple Java console client.
 
-##DAO
+## DAO
 Module of realization data acess to postgresql.
 
-##Client
+## Client
 Simple console client for access j2ee and standalone.
 
-##J2ee
+## J2ee
 Module for j2ee server to glassfish
 
 ##Standalone
