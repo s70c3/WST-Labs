@@ -19,7 +19,6 @@ import java.util.stream.Stream;
 public class StationDAO {
 
     private final String TABLE_NAME = "metro_stations";
-    private final String ID_COLUMN = "id";
     private final String NAME_COLUMN = "name";
     private final String END_COLUMN = "isend";
     private final String TYPE_COLUMN = "station_type";
@@ -53,7 +52,7 @@ public class StationDAO {
 
     }
 
-    public List<Station> filter(String name, Boolean isend,  String city, String line, String type) throws SQLException {
+    public List<Station> filter(String name,  String city, String line, Boolean isend, String type) throws SQLException {
 
         Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, name+city+line+type);
 

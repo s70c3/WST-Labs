@@ -13,53 +13,48 @@ public class WebServiceClient {
 
 
     public static void main(String[] args) throws MalformedURLException {
-        URL url = new URL("http://localhost:8080/StationService?wsdl");
+        URL url = new URL("http://localhost:8080/app/StationService?wsdl");
         StationService stationService = new StationService(url);
 
         Scanner in = new Scanner(System.in);
         while (true) {
             System.out.println("Найдите интересующую станцию. Параметры поиска: ");
-            System.out.println("Имя");
+            System.out.print("Название: ");
             String name = checkNull(in.nextLine());
-
-            System.out.println("Город");
+            System.out.print("\nГород: ");
             String city = checkNull(in.nextLine());
-
-            System.out.println("Линия (название)");
+            System.out.print("\nЛиния (название): ");
             String line = checkNull(in.nextLine());
-
-            System.out.println("Является конечной (да/нет)");
+            System.out.print("\nЯвляется конечной (да/нет): ");
             Boolean isend = checkEnd(in.nextLine());
 
-            System.out.println("Тип");
+            System.out.print("\nТип: ");
             String type = checkNull(in.nextLine());
 
 
             List<Station> stations = stationService.getStationWebServicePort().filter(
-                    name, line, city, isend, type);
+                    name, city, line, isend, type);
 
             if (stations.isEmpty()) { System.out.println("Станций метро не найдено");}
             else {
                 for (Station station : stations) {
                     System.out.println("name: " + station.getName() +
-                            ", line: " + station.getLine());
+                            ", line: " + station.getLine() + " endnees: " + station.isEnd());
                 }
                 System.out.println("Total stations: " + stations.size());
             }
-
 
         }
 
 
     }
 
-
     public static  String checkNull (String s) {
         return s.length()==0 ? null : s;
     }
     public static Boolean checkEnd(String s) {
         if (s.length()==0) return null;
-        else return s=="да" ? Boolean.TRUE : Boolean.FALSE;
+        return s.equals("да") ? Boolean.TRUE : Boolean.FALSE;
     }
 
 

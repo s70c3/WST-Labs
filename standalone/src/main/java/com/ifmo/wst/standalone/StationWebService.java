@@ -48,7 +48,7 @@ public class StationWebService {
 
         try {
 
-            return stationDAO.filter(name, isEnd, line, city, type);
+            return stationDAO.filter(name,  city,  line, isEnd, type);
         } catch (SQLException e) {
             e.printStackTrace();
         }
