@@ -10,6 +10,6 @@ Simple console client for access j2ee and standalone.
 ## J2ee
 Module for j2ee server to glassfish
 
-##Standalone
+## Standalone
 Module for standalone server. Realization are quite similar to j2ee.
 
