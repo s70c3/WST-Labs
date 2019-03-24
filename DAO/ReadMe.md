@@ -2,7 +2,7 @@
 
 ## Entity
 
-`create table metro_stations
+```create table metro_stations
 (
   id           bigserial not null
     constraint stations_pkey
@@ -13,4 +13,4 @@
   line         varchar(200),
   station_type varchar(200)
 );
-`
+```
