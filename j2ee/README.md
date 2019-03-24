@@ -1,6 +1,5 @@
-# mvnjaxws
-a barebones jax-ws maven project.
+# J2ee app
+Simple app for deploying for Glassfish.
 
 # building
 `mvn package`
-Requires maven - http://maven.apache.org
