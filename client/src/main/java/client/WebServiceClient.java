@@ -1,8 +1,8 @@
 package client;
 
 
-import com.wst.ifmo.com.Station;
-import com.wst.ifmo.com.StationService;
+import generated.Station;
+import generated.StationService;
 
 import java.net.MalformedURLException;
 import java.net.URL;

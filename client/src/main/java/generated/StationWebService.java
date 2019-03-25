@@ -1,5 +1,5 @@
 
-package com.wst.ifmo.com;
+package generated;
 
 import java.util.List;
 import javax.jws.WebMethod;
@@ -32,12 +32,12 @@ public interface StationWebService {
      * @param isend
      * @param type
      * @return
-     *     returns java.util.List<com.wst.ifmo.com.Station>
+     *     returns java.util.List<Station>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "filter", targetNamespace = "http://com.ifmo.wst.com", className = "com.wst.ifmo.com.Filter")
-    @ResponseWrapper(localName = "filterResponse", targetNamespace = "http://com.ifmo.wst.com", className = "com.wst.ifmo.com.FilterResponse")
+    @RequestWrapper(localName = "filter", targetNamespace = "http://com.ifmo.wst.com", className = "Filter")
+    @ResponseWrapper(localName = "filterResponse", targetNamespace = "http://com.ifmo.wst.com", className = "FilterResponse")
     public List<Station> filter(
         @WebParam(name = "name", targetNamespace = "")
         String name,
@@ -53,23 +53,23 @@ public interface StationWebService {
     /**
      * 
      * @return
-     *     returns java.util.List<com.wst.ifmo.com.Station>
+     *     returns java.util.List<Station>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getStations", targetNamespace = "http://com.ifmo.wst.com", className = "com.wst.ifmo.com.GetStations")
-    @ResponseWrapper(localName = "getStationsResponse", targetNamespace = "http://com.ifmo.wst.com", className = "com.wst.ifmo.com.GetStationsResponse")
+    @RequestWrapper(localName = "getStations", targetNamespace = "http://com.ifmo.wst.com", className = "GetStations")
+    @ResponseWrapper(localName = "getStationsResponse", targetNamespace = "http://com.ifmo.wst.com", className = "GetStationsResponse")
     public List<Station> getStations();
 
     /**
      * 
      * @return
-     *     returns java.util.List<com.wst.ifmo.com.Station>
+     *     returns java.util.List<Station>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findAll", targetNamespace = "http://com.ifmo.wst.com", className = "com.wst.ifmo.com.FindAll")
-    @ResponseWrapper(localName = "findAllResponse", targetNamespace = "http://com.ifmo.wst.com", className = "com.wst.ifmo.com.FindAllResponse")
+    @RequestWrapper(localName = "findAll", targetNamespace = "http://com.ifmo.wst.com", className = "FindAll")
+    @ResponseWrapper(localName = "findAllResponse", targetNamespace = "http://com.ifmo.wst.com", className = "FindAllResponse")
     public List<Station> findAll();
 
 }

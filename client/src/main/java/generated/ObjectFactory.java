@@ -1,5 +1,5 @@
 
-package com.wst.ifmo.com;
+package generated;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;

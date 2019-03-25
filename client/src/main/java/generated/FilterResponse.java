@@ -1,5 +1,5 @@
 
-package com.wst.ifmo.com;
+package generated;
 
 import java.util.ArrayList;
 import java.util.List;

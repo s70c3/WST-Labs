@@ -1,5 +1,5 @@
 
-package com.wst.ifmo.com;
+package generated;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getStationsResponse complex type.
+ * <p>Java class for findAllResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getStationsResponse">
+ * &lt;complexType name="findAllResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -29,10 +29,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getStationsResponse", propOrder = {
+@XmlType(name = "findAllResponse", propOrder = {
     "_return"
 })
-public class GetStationsResponse {
+public class FindAllResponse {
 
     @XmlElement(name = "return")
     protected List<Station> _return;
