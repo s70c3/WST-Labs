@@ -38,7 +38,7 @@ public class BuildQuery {
         return this;
     }
 
-    public Query buildPreparedStatementQuery() {
+    public Query buildReadStatementQuery() {
         StringBuilder query = new StringBuilder("SELECT ");
         String selectColumns = String.join(", ", columnNames);
         query.append(selectColumns).append(" FROM ").append(tableName);
@@ -57,6 +57,9 @@ public class BuildQuery {
         }
         return new Query(query.toString(), actualConditions);
     }
+
+
+
 
     @Override
     public String toString() {

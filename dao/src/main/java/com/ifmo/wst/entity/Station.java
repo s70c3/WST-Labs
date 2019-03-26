@@ -3,6 +3,7 @@ package com.ifmo.wst.entity;
 
 public class Station {
 
+    private int id;
     private String name;
     private Boolean isEnd;
     private String city;
@@ -19,6 +20,19 @@ public class Station {
         this.line = line;
         this.station_type = station_type;
     }
+
+    public Station(int id, String name, String line, Boolean isEnd, String station_type, String city) {
+        this.id = id;
+        this.name = name;
+        this.isEnd = isEnd;
+        this.city = city;
+        this.line = line;
+        this.station_type = station_type;
+    }
+
+    public int getId() { return id; }
+
+    public void setId(int id) {  this.id = id; }
 
     public String getName() {
         return name;

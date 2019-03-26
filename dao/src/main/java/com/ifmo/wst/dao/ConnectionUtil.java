@@ -15,7 +15,7 @@ public class ConnectionUtil {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(SimplePostgresSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StationDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
