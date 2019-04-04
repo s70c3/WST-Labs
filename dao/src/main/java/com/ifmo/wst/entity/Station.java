@@ -85,6 +85,7 @@ public class Station {
     @Override
     public String toString() {
         return "Station{" +
+                "id='" + id + '\'' +
                 "name='" + name + '\'' +
                 ", isEnd=" + isEnd +
                 ", city='" + city + '\'' +

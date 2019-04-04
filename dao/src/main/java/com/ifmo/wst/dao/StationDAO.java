@@ -154,6 +154,7 @@ public class StationDAO {
     }
 
     public int delete(long id) {
+        Logger.getLogger(StationDAO.class.getName()).log(Level.SEVERE, String.valueOf(id));
         try {
             connection.setAutoCommit(true);
             try (PreparedStatement ps = connection.prepareStatement("DELETE FROM metro_stations WHERE id = ?")) {
@@ -176,7 +177,7 @@ public class StationDAO {
     }
 
     private Station resultSetToEntity(ResultSet rs) throws SQLException {
-         Integer id = rs.getInt("id");
+        Integer id = rs.getInt("id");
         String name = rs.getString("name");
         String line = rs.getString("line");
         String type = rs.getString("station_type");

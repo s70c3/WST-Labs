@@ -17,10 +17,12 @@ public class WebServiceClient {
 
     private static BufferedReader in;
     private static final String URL = "http://localhost:8080/rest/stations";
+    private static WebResource resource;
 
     public static void main(String[] args) throws IOException {
 
-        Client client =  new Client();
+        Client client = new Client();
+        resource = client.resource(URL);
 
         System.out.println("Добро пожаловать в систему информации о станциях метро. Что вы хотите сделать?");
         in = new BufferedReader(new InputStreamReader(System.in));
@@ -30,7 +32,10 @@ public class WebServiceClient {
             try {
                 command = Integer.parseInt(in.readLine());
             } catch (IOException e) {
-                e.printStackTrace();
+               System.out.println("Вводите только цифры. ");
+            }
+            catch (NumberFormatException u) {
+                System.out.println("Вводите только цифры. ");
             }
 
             switch (command) {
@@ -38,13 +43,13 @@ public class WebServiceClient {
                     printList(read(client));
                     break;
                 case 2:
-                    update();
+                    System.out.println(update());
                     break;
                 case 3:
-                    delete();
+                    System.out.println(delete());
                     break;
                 case 4:
-                    create();
+                    System.out.println(create());
                     break;
                 default:
                     break;
@@ -64,8 +69,6 @@ public class WebServiceClient {
         Boolean isend = getBooaleanColumn("Является конечной (да/нет): ");
         String type = getColumn("Тип: ");
 
-
-        WebResource resource = client.resource(URL);
         resource = setParamIfNotNull(resource, "name", name);
         resource = setParamIfNotNull(resource, "city", city);
         resource = setParamIfNotNull(resource, "line", line);
@@ -79,7 +82,7 @@ public class WebServiceClient {
         GenericType<List<Station>> stations = new GenericType<List<Station>>() {
         };
 
-        return  resource.accept(MediaType.APPLICATION_JSON).get(stations);
+        return resource.accept(MediaType.APPLICATION_JSON).get(stations);
 
     }
 
@@ -93,20 +96,18 @@ public class WebServiceClient {
         Boolean isend = getBooaleanColumn("Является конечной (да/нет): ");
         String type = getColumn("Тип: ");
 
-        int status = 0;
-
-        System.out.println(status);
-        return status;
-
+        Station station = new Station(name, line, isend, city, type);
+        String updateResponse = resource.path(String.valueOf(id))
+                .entity(station, MediaType.APPLICATION_JSON_TYPE)
+                .accept(MediaType.TEXT_PLAIN_TYPE)
+                .put(String.class);
+        return Integer.parseInt(updateResponse);
     }
 
     public static int delete() {
         int id = getIntColumn("ID: ");
-        int status = 0;
-
-        System.out.println(status);
-        return status;
-
+        String body = resource.path(String.valueOf(id)).accept(MediaType.TEXT_PLAIN_TYPE).delete(String.class);
+        return Integer.parseInt(body);
     }
 
     public static long create() {
@@ -118,10 +119,11 @@ public class WebServiceClient {
         Boolean isend = getBooaleanColumn("Является конечной (да/нет): ");
         String type = checkNull(getColumn("Тип: "));
 
-        long status = 0;
-
-        System.out.println(status);
-        return status;
+        Station station = new Station(name, line, isend, city, type);
+        String body = resource.accept(MediaType.TEXT_PLAIN_TYPE, MediaType.APPLICATION_JSON_TYPE)
+                .entity(station, MediaType.APPLICATION_JSON_TYPE)
+                .post(String.class);
+        return Long.parseLong(body);
 
     }
 
