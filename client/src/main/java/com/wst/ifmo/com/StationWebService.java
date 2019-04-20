@@ -1,7 +1,6 @@
 
 package com.wst.ifmo.com;
 
-import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -9,6 +8,7 @@ import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
+import java.util.List;
 
 
 /**
@@ -65,6 +65,7 @@ public interface StationWebService {
      * @param type
      * @return
      *     returns java.util.List<com.wst.ifmo.com.Station>
+     * @throws StationException
      */
     @WebMethod
     @WebResult(targetNamespace = "")
@@ -80,7 +81,9 @@ public interface StationWebService {
         @WebParam(name = "isend", targetNamespace = "")
         Boolean isend,
         @WebParam(name = "type", targetNamespace = "")
-        String type);
+        String type)
+        throws StationException
+    ;
 
     /**
      * 

@@ -1,22 +1,30 @@
 package client;
 
 
-import com.wst.ifmo.com.*;
+import com.wst.ifmo.com.Station;
+import com.wst.ifmo.com.StationException;
+import com.wst.ifmo.com.StationService;
 
+import javax.xml.ws.BindingProvider;
+import javax.xml.ws.handler.MessageContext;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class WebServiceClient {
 
     private static BufferedReader in;
     public static StationService stationService;
+    private static  URL url;
 
-    public static void main(String[] args) throws MalformedURLException {
-        URL url = new URL("http://localhost:8080/app/StationService?wsdl");
+    public static void main(String[] args) throws MalformedURLException, StationException {
+        url = new URL("http://localhost:8080/app/StationService?wsdl");
         stationService = new StationService(url);
 
         in = new BufferedReader(new InputStreamReader(System.in));
@@ -49,9 +57,20 @@ public class WebServiceClient {
 
 
     }
+    public static void prepareAuth() {
+        Map<String, Object> req_ctx = ((BindingProvider)stationService.getStationWebServicePort()).getRequestContext();
+        System.out.println(url.toString());
+        req_ctx.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url.toString());
 
+        Map<String, List<String>> headers = new HashMap<>();
 
-    public static void read() {
+        headers.put("Username", Collections.singletonList("user"));
+        headers.put("Password", Collections.singletonList("pass"));
+        req_ctx.put(MessageContext.HTTP_REQUEST_HEADERS, headers);
+    }
+
+    public static void read() throws StationException {
+        prepareAuth();
         System.out.println("Найдите интересующую станцию. Параметры поиска:");
 
         String name = getColumn("Название станции: ");
@@ -83,6 +102,7 @@ public class WebServiceClient {
 }
 
     public static int update() {
+        prepareAuth();
         System.out.println("Обновите станцию. Параметры поиска: ");
 
         int id = getIntColumn("ID: ");
@@ -104,6 +124,7 @@ public class WebServiceClient {
     }
 
     public static int delete() {
+        prepareAuth();
         int id = getIntColumn("ID: ");
         int status = 0;
         try {
@@ -117,6 +138,7 @@ public class WebServiceClient {
     }
 
     public static long create() {
+        prepareAuth();
         System.out.println("Добавьте станцию. ");
 
         String name = getColumn("Название станции: ");
