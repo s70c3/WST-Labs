@@ -6,6 +6,7 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.GenericType;
 import com.sun.jersey.api.client.WebResource;
+import sun.misc.BASE64Encoder;
 
 import javax.ws.rs.core.MediaType;
 import java.io.BufferedReader;
@@ -18,11 +19,24 @@ public class WebServiceClient {
     private static BufferedReader in;
     private static final String URL = "http://localhost:8080/rest/stations";
     private static WebResource resource;
-
+    private static String authStringEnc;
     public static void main(String[] args) throws IOException {
 
-        Client client = new Client();
+        String name = "user";
+        String password = "pass";
+        String authString = name + ":" + password;
+        authStringEnc = new BASE64Encoder().encode(authString.getBytes());
+        Client client = Client.create();
         resource = client.resource(URL);
+        ClientResponse resp = resource.accept("application/json")
+                .header("Authorization", "Basic " + authStringEnc)
+                .get(ClientResponse.class);
+        if(resp.getStatus() != 200){
+            System.err.println("Unable to connect to the server");
+        }
+        else {
+            System.err.println(resp);
+        }
 
         System.out.println("Добро пожаловать в систему информации о станциях метро. Что вы хотите сделать?");
         in = new BufferedReader(new InputStreamReader(System.in));
@@ -75,7 +89,9 @@ public class WebServiceClient {
         resource = setParamIfNotNull(resource, "isend", isend);
         resource = setParamIfNotNull(resource, "type", type);
 
-        ClientResponse response = resource.accept(MediaType.APPLICATION_JSON_TYPE).get(ClientResponse.class);
+        ClientResponse response = resource.accept(MediaType.APPLICATION_JSON_TYPE)
+                .header("Authorization", "Basic " + authStringEnc)
+                .get(ClientResponse.class);
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             throw new IllegalStateException("Request failed");
         }
@@ -101,6 +117,7 @@ public class WebServiceClient {
         String updateResponse = resource.path(String.valueOf(id))
                 .entity(station, MediaType.APPLICATION_JSON_TYPE)
                 .accept(MediaType.TEXT_PLAIN_TYPE)
+                .header("Authorization", "Basic " + authStringEnc)
                 .put(String.class);
         System.out.println(updateResponse);
         return Integer.parseInt(updateResponse);
@@ -108,8 +125,13 @@ public class WebServiceClient {
 
     public static int delete() {
         int id = getIntColumn("ID: ");
-        String body = resource.path(String.valueOf(id)).accept(MediaType.TEXT_PLAIN_TYPE).delete(String.class);
+        String body = resource.path(String.valueOf(id)).accept(MediaType.TEXT_PLAIN_TYPE)
+                .header("Authorization", "Basic " + authStringEnc)
+                .delete(String.class);
+        System.out.println(body);
         return Integer.parseInt(body);
+
+
     }
 
     public static long create() {
@@ -119,10 +141,11 @@ public class WebServiceClient {
         String city = getColumn("Город: ");
         String line = getColumn("Линия: ");
         Boolean isend = getBooaleanColumn("Является конечной (да/нет): ");
-        String type = checkNull(getColumn("Тип: "));
+        String type = getColumn("Тип: ");
 
         Station station = new Station(name, line, isend, city, type);
         String body = resource.accept(MediaType.TEXT_PLAIN_TYPE, MediaType.APPLICATION_JSON_TYPE)
+                .header("Authorization", "Basic " + authStringEnc)
                 .entity(station, MediaType.APPLICATION_JSON_TYPE)
                 .post(String.class);
         System.out.println(body);
