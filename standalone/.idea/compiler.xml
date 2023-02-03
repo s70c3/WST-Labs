@@ -6,17 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="client" />
-        <module name="dao" />
-        <module name="standalone" />
+        <module name="WST1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="client" target="1.5" />
-      <module name="dao" target="1.8" />
-      <module name="j2ee" target="1.8" />
-      <module name="standalone" target="1.8" />
-      <module name="WST-2" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

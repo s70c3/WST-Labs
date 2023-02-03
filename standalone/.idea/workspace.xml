@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="050559ad-e2ad-4370-b06f-7e6d6799520a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/PostgreSQLDAO1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/entity/Station.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/StationWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/StationWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/client/WebServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/client/WebServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStationsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStationsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/Station.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/j2eeclient/PostgreSQLDAO2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/j2eeclient/StationWebService2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/util/PostgresSQLDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifmo/wst/util/PostgresSQLDAO.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="578936562">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+          <entry key="Scratch" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="sql" value="35" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Scratch" value="35" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1743548162">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/client/WebServiceClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/ConnectionUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/277fb79a-a6b8-4ad5-b654-6669e97b6bc0/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/util/PostgresSQLDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStationsResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/ObjectFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/package-info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Person</find>
+      <find>data</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/ConnectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PostgreSQLDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PersonWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/ConnectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/PostgreSQLDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/PersonWebService.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/35265189-a7e1-4a4c-8809-88b155422900/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/stations/ConnectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/stations/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/stations/WebServiceClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/stations/PostgreSQLDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/stations/StationWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/java/ifmo/wst/generated/GetStationsResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/java/ifmo/wst/generated/ObjectFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/stations/Station.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/WebServiceClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/StationService.wsdl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/StationWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/Station.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/App/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/StationWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/Util/StationQueries.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/PostgreSQLDAO1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/app/Station.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/j2eeclient/StationWebService2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/WebServiceClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/ConnectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/j2eeclient/PostgreSQLDAO2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/Station.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStationsResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/ObjectFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/package-info.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/PostgreSQLDAO1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/util/PostgresSQLDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/StationWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ifmo/wst/client/WebServiceClient.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/277fb79a-a6b8-4ad5-b654-6669e97b6bc0/console.sql" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="WST1" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="WST1" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="974" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="standalone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="standalone" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552741454518" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.33372092" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ifmo.wst.j2eeclient" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/ifmo/wst/stations" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/java/ifmo/wst/generated" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ifmo.wst.stations.App" />
+      <module name="WST1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="standalone.App" />
+      <module name="WST1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ifmo.wst.standalone.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ifmo.wst.standalone.app.App" />
+      <module name="WST1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ifmo.wst.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebServiceClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ifmo.wst.client.WebServiceClient" />
+      <module name="WST1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ifmo.wst.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebServiceClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ifmo.wst.stations.WebServiceClient" />
+      <module name="WST1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ifmo.wst.stations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebServiceClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ifmo.wst.standalone.client.WebServiceClient" />
+      <module name="WST1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ifmo.wst.standalone.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.WebServiceClient" />
+      <item itemvalue="Application.WebServiceClient (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.WebServiceClient (1)" />
+        <item itemvalue="Application.WebServiceClient (1)" />
+        <item itemvalue="Application.WebServiceClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="050559ad-e2ad-4370-b06f-7e6d6799520a" name="Default Changelist" comment="" />
+      <created>1551035750787</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551035750787</updated>
+      <workItem from="1551035758078" duration="378000" />
+      <workItem from="1551051470066" duration="2267000" />
+      <workItem from="1551083386787" duration="180000" />
+      <workItem from="1551083680277" duration="197000" />
+      <workItem from="1551084167310" duration="29148000" />
+      <workItem from="1552246395085" duration="1036000" />
+      <workItem from="1552252331763" duration="3470000" />
+      <workItem from="1552565414318" duration="748000" />
+      <workItem from="1552567434332" duration="1802000" />
+      <workItem from="1552731421381" duration="1284000" />
+      <workItem from="1552741551158" duration="88000" />
+    </task>
+    <task id="LOCAL-00001" summary="added webclient">
+      <created>1551977041522</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551977041524</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added generated classes for web client">
+      <created>1552074632931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552074632935</updated>
+    </task>
+    <task id="LOCAL-00003" summary="j2ee client implemented, not tested">
+      <created>1552228082887</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552228082889</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="40598000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2741148" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3653061" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32959184" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32959184" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32959184" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.20512821" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.15995117" />
+      <window_info anchor="right" id="JSF" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+      <window_info anchor="right" id="Maven Projects" order="12" visible="true" weight="0.32967034" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added webclient" />
+    <MESSAGE value="added generated classes for web client" />
+    <MESSAGE value="j2ee client implemented, not tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="j2ee client implemented, not tested" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Person.java" />
+    <entry file="das://35265189-a7e1-4a4c-8809-88b155422900/role/mari" />
+    <entry file="das://35265189-a7e1-4a4c-8809-88b155422900/database/postgres/schema/public/table/persons" />
+    <entry file="das://35265189-a7e1-4a4c-8809-88b155422900/database/postgres/schema/public/table/metro_stations" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/35265189-a7e1-4a4c-8809-88b155422900/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/StationService.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/GetStationsResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/ObjectFactory.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/net/AbstractPlainSocketImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2759">
+          <caret line="195" column="29" selection-start-line="195" selection-start-column="29" selection-end-line="195" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/StationService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/WebServiceClient.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/StationService.wsdl" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStations.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStationsResponse.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/package-info.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationWebService.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/util/SQLQueries.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/Util/StationQueries.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationService.wsdl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/j2eeclient/PostgreSQLDAO2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/PostgreSQLDAO1.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/j2eeclient/StationWebService2.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/javax/xml/ws/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/StationWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/StationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/entity/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/client/WebServiceClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/standalone/ConnectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/277fb79a-a6b8-4ad5-b654-6669e97b6bc0/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/util/PostgresSQLDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/GetStationsResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/ObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ifmo/wst/generated/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="javaee-facet-resources" />
+              <type id="artifact" />
+              <type id="jpa-descriptors" />
+              <type id="library" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>j2ee</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33372092" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>WST1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33372092" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.33372092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
